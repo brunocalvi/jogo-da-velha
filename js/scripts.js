@@ -23,12 +23,12 @@ for(let i = 0; i < boxes.length; i++) {
       let cloneEl = el.cloneNode(true);
       this.appendChild(cloneEl);
 
-      // COMPUTAR JOGADA
+      // COMPUTA A JOGADA
       if(player1 == player2) {
         player1++;
 
         if(secondPlayer == 'ai-player') {
-          // FUNCAO PARA EXECUAR JOGADA
+          // FUNCAO PARA EXECUTAR JOGADA
           computerPlay();
           player2++;
         }
@@ -85,7 +85,6 @@ function checkWinCondition() {
   let b8 = document.getElementById("block-8"); 
   let b9 = document.getElementById("block-9");   
 
-  // HORIZONTAL 
   if(b1.childNodes.length > 0 && b2.childNodes.length > 0 && b3.childNodes.length > 0) {
 
     let b1Child = b1.childNodes[0].className;
@@ -220,7 +219,7 @@ function checkWinCondition() {
   }
 }
 
-// LIMPA O JOGO, DLCARA O VENCEDOR E ATUALIZA O PLACA
+// LIMPA O JOGO, DECLARA O VENCEDOR E ATUALIZA O PLACA
 function declareWineer(winner){
   let scoreboardX = document.querySelector("#scoreboard-1");
   let scoreboardY = document.querySelector("#scoreboard-2");
@@ -260,7 +259,7 @@ function declareWineer(winner){
   }
 }
 
-// EXECUTAR LOGICA IA
+// EXECUTA A LOGICA IA
 function computerPlay() {
   let cloneO = o.cloneNode(true);
   counter = 0;
